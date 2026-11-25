@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_logo">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_chevrons" />
+        </FrameLayout>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:letterSpacing="0.18"
+            android:text="SCROLLTRACK"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tvStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 / 3"
+            android:textColor="@color/text_muted"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Sayfa 1 -->
+            <LinearLayout
+                android:id="@+id/page1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="24dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ScrollTrack nedir?"
+                    android:textColor="@color/text"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="ScrollTrack, TikTok'ta bir günde kaç video kaydırdığını sayar ve sana günlük bir özet ile istatistik sunar.\n\nBöylece ne kadar zaman harcadığını fark edebilir, kendine günlük bir hedef koyabilirsin."
+                    android:textColor="@color/text_muted"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Not: Sayım yaklaşık bir ölçümdür. Android, her videonun değiştiğini doğrudan bildirmez; uygulama kaydırma hareketlerini sayar. Birkaç video fazla ya da eksik çıkabilir."
+                    android:textColor="@color/warn"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Sayfa 2 -->
+            <LinearLayout
+                android:id="@+id/page2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Neden erişilebilirlik izni?"
+                    android:textColor="@color/text"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Android, bir uygulamanın başka bir uygulamadaki kaydırmayı bilmesine ancak Erişilebilirlik hizmeti ile izin verir. Başka bir yolu yoktur."
+                    android:textColor="@color/text_muted"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="✓  Yalnızca TikTok içindeki &quot;kaydırıldı&quot; sinyalini alır\n✓  Ekran içeriğini, mesajları, kullanıcı adlarını OKUMAZ\n✓  İnternet izni yoktur, hiçbir veri gönderilmez\n✓  Veriler sadece bu telefonda saklanır\n✓  İzni istediğin an kapatabilirsin"
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <!-- Sayfa 3 -->
+            <LinearLayout
+                android:id="@+id/page3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="İzni nasıl açarsın?"
+                    android:textColor="@color/text"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="1.  Aşağıdaki butona dokun, Android ayarları açılır.\n2.  &quot;Yüklü uygulamalar&quot; veya &quot;İndirilen uygulamalar&quot; bölümünde ScrollTrack'i bul.\n3.  ScrollTrack'e dokun ve anahtarı AÇ.\n4.  Çıkan uyarıda &quot;İzin ver&quot; / &quot;Tamam&quot; de.\n5.  Geri dön; uygulama otomatik olarak sayaç ekranına geçer."
+                    android:textColor="@color/text"
+                    android:textSize="15sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Anahtar gri ve dokunulamıyorsa (Android 13 ve üstü, APK ile kurulan uygulamalarda olur): &quot;Uygulama bilgisi&quot; sayfasını aç, sağ üstteki ⋮ menüsüne dokun, &quot;Kısıtlanmış ayarlara izin ver&quot; seç, sonra tekrar dene."
+                    android:textColor="@color/warn"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/btnAppInfo"
+                    style="@style/BtnSecondary"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="14dp"
+                    android:text="Uygulama bilgisini aç"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/btnPrimary"
+        style="@style/BtnPrimary"
+        android:layout_marginTop="12dp"
+        android:text="Devam" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Geri"
+            android:textColor="@color/text_muted"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/btnSkip"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Şimdilik atla"
+            android:textColor="@color/text_muted"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>
